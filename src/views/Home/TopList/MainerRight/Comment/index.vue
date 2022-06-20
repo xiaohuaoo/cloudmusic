@@ -67,7 +67,7 @@ export default {
   },
   computed: {
     id () {
-      if(this.$route.query.id == undefined) return '19723756'
+      if (this.$route.query.id === undefined) return '19723756'
       return this.$route.query.id
     }
   },
@@ -84,7 +84,7 @@ export default {
   methods: {
     // 获取评论
     async getComment () {
-      const result = await this.$API.reqCommentPlayList(this.id, this,this.searchParams.pageSize, (this.searchParams.pageNo-1)*(this.searchParams.pageSize))
+      const result = await this.$API.reqCommentPlayList(this.id, this, this.searchParams.pageSize, (this.searchParams.pageNo - 1) * (this.searchParams.pageSize))
       this.searchParams.total = result.total
       this.comList = result.comments
     },
@@ -248,7 +248,7 @@ export default {
                         &:hover{
                             cursor: pointer;
                             text-decoration: underline;
-                        }  
+                        }
                     }
                     .que{
                         padding: 8px 19px;
@@ -261,7 +261,7 @@ export default {
                             &:hover{
                                 cursor: pointer;
                                 text-decoration: underline;
-                            } 
+                            }
                         }
                     }
                     .rp{
@@ -278,7 +278,7 @@ export default {
                         }
                         .fc{
                             color: #666;
-                            
+
                             &:hover{
                                 color: #666;
                                 cursor: pointer;

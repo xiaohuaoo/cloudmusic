@@ -47,6 +47,12 @@ export const reqplayListCat = (limit = 50, order = 'new', cat = '全部', offset
   method: 'GET'
 })
 
+// 获取歌单分类 /playlist/catlist
+export const reqCatList = () => request({
+  url: '/playlist/catlist',
+  methods: 'GET'
+})
+
 // 获取用户详情 /user/detail
 export const reqDetail = (id, cookie) => request({
   url: `/user/detail?uid=${id}&cookie=${cookie}`,

@@ -7,17 +7,23 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import * as API from '@/api'
 import VueLazyload from 'vue-lazyload'
+import atm from '@/assets/lazyload.gif'
 Vue.use(less)
 
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
 
-Vue.use(VueLazyload)
+Vue.use(VueLazyload, {
+  // 懒加载默认的图片
+  loading: atm
+})
 
 new Vue({
   render: h => h(App),
   beforeCreate () {
+    Vue.prototype.$bus = this
+    // 组件实例的原型的 原型指向的是prototype对象
     Vue.prototype.$API = API
   },
   router,
