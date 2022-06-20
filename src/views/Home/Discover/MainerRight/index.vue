@@ -22,7 +22,7 @@ export default {
   },
   computed: {
     isLogin () {
-      if (localStorage.getItem("COOKIE")!=null) {
+      if (localStorage.getItem('COOKIE') != null) {
         return true
       } else {
         return false

@@ -16,23 +16,23 @@ export default [
       {
         path: 'toplist/:id?',
         component: () => import('@/views/Home/TopList')
+      },
+      {
+        path: 'playlist',
+        component: () => import('@/views/Home/PlayList')
+      },
+      {
+        path: 'djradio',
+        component: () => import('@/views/Home/DjRadio')
       }
-      // {
-      //     path:'playlist',
-      //     component:()=>import('@/views/Home/PlayList'),
-      // },
-      // {
-      //     path:'djradio',
-      //     component:()=>import('@/views/Home/DjRadio'),
-      // },
       // {
       //     path:'artist',
       //     component:()=>import('@/views/Home/Artist'),
       // },
       // {
-      //     path:'album',
-      //     component:()=>import('@/views/Home/Album'),
-      // },
+      //   path: 'album',
+      //   component: () => import('@/views/Home/Album')
+      // }
     ]
   },
   // {

@@ -83,7 +83,7 @@ export default {
       catList: [],
       // 是否显示弹窗
       isShowList: false,
-      catCopy:'全部'
+      catCopy: '全部'
     }
   },
   methods: {
@@ -103,11 +103,11 @@ export default {
     async getCatList () {
       const result = await this.$API.reqCatList()
       for (let i = 0; i <= 4; i++) {
-        let x = {name: '', sub: []}
-        if (i == 0) x.name = '语种'
-        else if (i == 1) x.name = '风格'
-        else if (i == 2) x.name = '场景'
-        else if (i == 3) x.name = '情感'
+        const x = { name: '', sub: [] }
+        if (i === 0) x.name = '语种'
+        else if (i === 1) x.name = '风格'
+        else if (i === 2) x.name = '场景'
+        else if (i === 3) x.name = '情感'
         else x.name = '主题'
         this.catList.push(x)
       }
@@ -123,8 +123,9 @@ export default {
     },
     // 关闭弹窗
     closeBox () {
-      if(this.isShowList == true)
+      if (this.isShowList === true) {
         this.isShowList = false
+      }
     },
     // 切换分类
     goCatList (attr) {
@@ -133,7 +134,7 @@ export default {
       this.isShowList = false
       setTimeout(() => {
         this.catCopy = this.cat
-      },  300)
+      }, 300)
     }
   },
   mounted () {
@@ -338,7 +339,7 @@ export default {
                 border-left: 1px solid #e6e6e6;
                 line-height: 24px;
                 width:603px;
-                
+
                 li{
                   line-height: 24px;
                   display: inline-block;
@@ -350,13 +351,13 @@ export default {
                       text-decoration: underline;
                     }
                   }
-                  
+
                   .line{
                     margin: 0 9px 0 11px;
                     color: #d8d8d8;
-                  }  
+                  }
                 }
-                
+
             }
           }
           .last{
@@ -433,7 +434,7 @@ export default {
                   font-family: Arial, Helvetica, sans-serif;
                   -webkit-text-size-adjust: none;
                 }
-                
+
               .icon-play{
                 position: absolute;
                 float: right;

@@ -26,13 +26,13 @@ export default {
   name: 'toplistmainerleft',
   data () {
     return {
-      itemList:[],
-      globalList:[]
+      itemList: [],
+      globalList: []
     }
   },
   computed: {
     id () {
-      if (this.$route.query.id == undefined) return '19723756'
+      if (this.$route.query.id === undefined) return '19723756'
       return this.$route.query.id
     }
   },
@@ -46,14 +46,14 @@ export default {
       }
     },
     // 切换
-    Go(item) {
+    Go (item) {
       this.$router.push({
-        path:'/home/toplist',
-        query:{
-            id:item.id
+        path: '/home/toplist',
+        query: {
+          id: item.id
         }
       })
-      this.$bus.$emit('getNum',item.updateFrequency)
+      this.$bus.$emit('getNum', item.updateFrequency)
     }
   },
   mounted () {

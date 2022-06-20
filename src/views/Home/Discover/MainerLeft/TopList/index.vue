@@ -46,31 +46,29 @@ export default {
   props: {},
   data () {
     return {
-        imgList: [], //榜单数据
-        name: []
+      imgList: [], // 榜单数据
+      name: []
     }
   },
-  created () {},
-  mounted () {},
   methods: {
     // 获取榜单数据
     async getTopList () {
-      let result = await this.$API.reqTopList()
-      if (result.code == 200) {
-        let x = result.list.slice(0, 3)
+      const result = await this.$API.reqTopList()
+      if (result.code === 200) {
+        const x = result.list.slice(0, 3)
         x.forEach(async (item) => {
-          let result2 = await this.$API.reqPlayList(item.id)
-          let t = {}
+          const result2 = await this.$API.reqPlayList(item.id)
+          const t = {}
           t.id = item.id
           t.name = item.name
           t.url = result2.playlist.coverImgUrl
-          t.data = result2.privileges.slice(0,10)
-          let s = ""
+          t.data = result2.privileges.slice(0, 10)
+          let s = ''
           for (let i = 0; i < 10; i++) {
             s += t.data[i].id
-            if(i != 9) s += ','
+            if (i !== 9) s += ','
           }
-          let result3 = await this.$API.reqSong(s)
+          const result3 = await this.$API.reqSong(s)
           for (let i = 0; i < 10; i++) {
             t.data[i].name = result3.song[i].name
           }
@@ -78,12 +76,11 @@ export default {
         })
       }
     },
-    //刷新页面
-    refresh(){
-      let timer = setTimeout(() => {
+    // 刷新页面
+    refresh () {
+      const timer = setTimeout(() => {
         this.$forceUpdate()
         clearTimeout(timer)
-        
         this.load = false
       }, 100)
     },
@@ -92,7 +89,7 @@ export default {
       this.$router.push({
         path: '/home/toplist',
         query: {
-            id
+          id
         }
       })
     },
@@ -213,7 +210,7 @@ export default {
               cursor: pointer;
               text-decoration: underline;
             }
-            
+
             a {
                 color: #333;
                 font-size: 14px;

@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import {mapState} from 'vuex'
+import { mapState } from 'vuex'
 export default {
   name: 'recommendation',
   components: {},
@@ -40,23 +40,23 @@ export default {
   },
   computed: {
     ...mapState({
-        PersonalizedList: state => state.home.PersonalizedList
+      PersonalizedList: state => state.home.PersonalizedList
     }),
     playCount () {
-        let result = []
-        this.PersonalizedList.forEach(item => {
-            if (item.playCount >= 10000) {
-                result.push(parseInt(item.playCount/10000)+'万')
-            } else {
-                result.push(item.playCount + '')
-            }
-        })
-        return result
+      const result = []
+      this.PersonalizedList.forEach(item => {
+        if (item.playCount >= 10000) {
+          result.push(parseInt(item.playCount / 10000) + '万')
+        } else {
+          result.push(item.playCount + '')
+        }
+      })
+      return result
     }
   },
   mounted () {
     this.$store.dispatch('getPersonalized', 8)
-  },
+  }
 }
 </script>
 
@@ -112,7 +112,7 @@ export default {
 
             a {
                 font-size: 12px;
-                color: #666;  
+                color: #666;
                 line-height: 15px;
 
                 &:hover{
@@ -120,7 +120,7 @@ export default {
                     text-decoration: underline;
                 }
             }
-            
+
             i {
                 float: right;
                 display: block;

@@ -47,7 +47,7 @@
 export default {
   name: 'songList',
   components: {},
-  props:['playList','songList'],
+  props: ['playList', 'songList'],
   data () {
     return {
       length: 0,
@@ -62,8 +62,8 @@ export default {
   },
   methods: {
     // 添加音乐至播放列表
-    addMusicList(ids){
-      this.$store.dispatch('addMusicList',ids)
+    addMusicList (ids) {
+      this.$store.dispatch('addMusicList', ids)
     },
     // 设置当前播放的音乐
     setMusic (id) {
@@ -73,15 +73,17 @@ export default {
         this.$bus.$emit('play')
       }, 500)
     },
-    min(song) {
-      if(parseInt(song.dt/60000 < 10))
-        return '0'+parseInt(song.dt/60000)
-      else return parseInt(song.dt/60000)
+    min (song) {
+      if (parseInt(song.dt / 60000 < 10)) {
+        return '0' + parseInt(song.dt / 60000)
+      } else {
+        return parseInt(song.dt / 60000)
+      }
     },
     sec (song) {
-      let x = parseInt(song.dt/60000)
-      let y = parseInt(song.dt/1000-x * 60)
-      if(y < 10) return '0' + y
+      const x = parseInt(song.dt / 60000)
+      const y = parseInt(song.dt / 1000 - x * 60)
+      if (y < 10) return '0' + y
       else return y
     }
   },
@@ -211,7 +213,7 @@ export default {
                 }
                 .m2 {
                     width: 326px;
-                    
+
                     img {
                         float: left;
                         margin-right: 10px;

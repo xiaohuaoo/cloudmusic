@@ -18,7 +18,7 @@ export default {
   name: 'Pagination',
   props: ['pageNo', 'pageSize', 'total', 'continues'],
   computed: {
-    totalPage() {
+    totalPage () {
       return Math.ceil(this.total / this.pageSize)
     },
     startNumAndEndNum () {
@@ -26,12 +26,12 @@ export default {
       let end = 0
       start = Math.max(1, this.pageNo - Math.floor(this.continues / 2))
       end = Math.max(1, this.pageNo - Math.floor(this.continues / 2))
-      return {start, end}
+      return { start, end }
     }
   },
   methods: {
-    isPage(page){
-      return page == this.pageNo
+    isPage (page) {
+      return page === this.pageNo
     }
   }
 }

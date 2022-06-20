@@ -7,7 +7,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import * as API from '@/api'
 import VueLazyload from 'vue-lazyload'
-import atm from '@/assets/lazyload.gif'
+// import loadImg from './assets/lazyload.gif'
 Vue.use(less)
 
 Vue.config.productionTip = false
@@ -16,7 +16,7 @@ Vue.use(ElementUI)
 
 Vue.use(VueLazyload, {
   // 懒加载默认的图片
-  loading: atm
+  loading: require('./assets/lazyload.gif')
 })
 
 new Vue({

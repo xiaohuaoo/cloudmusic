@@ -64,8 +64,11 @@ export default {
   },
   computed: {
     id () {
-      if(this.$route.query.id == undefined) return '19723756'
-      return this.$route.query.id
+      if (this.$route.query.id === undefined) {
+        return '19723756'
+      } else {
+        return this.$route.query.id
+      }
     }
   },
   watch: {
@@ -79,11 +82,11 @@ export default {
       const result = await this.$API.reqPlayList(this.id)
       this.playList = result.playList
       this.songList = result
-      const s = ""
+      let s = ''
       for (let i = 0; i < result.privileges.length; i++) {
         s += result.privileges[i].id
-        if (i != result.privileges.length - 1) {
-          s += ","
+        if (i !== result.privileges.length - 1) {
+          s += ','
         }
       }
       const result2 = await this.$API.reqSong(s)
@@ -92,7 +95,7 @@ export default {
   },
   mounted () {
     this.getPlayList()
-    this.$bus.$on('getNum',(num) => {
+    this.$bus.$on('getNum', (num) => {
       this.num = num
     })
   }
@@ -125,7 +128,7 @@ export default {
                   width: 150px;
                   height: 150px;
               }
-              
+
               .mask{
                   width: 150px;
                   height: 150px;
@@ -146,12 +149,11 @@ export default {
                   width: 473px;
                   height: 24px;
                   h4{
-                      font-weight: normal; 
-                      font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif !important;
-                      font-size: 20px;   
-                      color: #333;
+                    font-weight: normal;
+                    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif !important;
+                    font-size: 20px;
+                    color: #333;
                   }
-                  
               }
               .user{
                   margin-top: 5px;
@@ -200,7 +202,7 @@ export default {
                           color: #fff;
                       }
                       &:hover{
-                          cursor: pointer;  
+                          cursor: pointer;
                       }
                   }
 
@@ -209,13 +211,13 @@ export default {
                       height: 31px;
                       margin-right: 5px;
                       background: url('../images/button2.png') no-repeat 0 -1588px;
-                      
+
                       &:hover{
                           cursor: pointer;
-                          background-position: -40px -1588px;  
+                          background-position: -40px -1588px;
                       }
                       &:active{
-                          background-position: -80px -1588px;  
+                          background-position: -80px -1588px;
                       }
                   }
 
@@ -239,7 +241,7 @@ export default {
                           cursor: pointer;
                       }
                   }
-                  
+
                   .share{
                       width: 79.8px;
                       height: 31px;
@@ -260,7 +262,7 @@ export default {
                           background: url('../images/button2.png') no-repeat;
                           background-position: right -1020px;
                       }
-                      
+
                       &:hover{
                           color:#666;
                           cursor: pointer;

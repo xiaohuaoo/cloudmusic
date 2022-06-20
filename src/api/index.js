@@ -76,3 +76,9 @@ export const reqSong = (ids) => request({
   url: `/song/detail?ids=${ids}`,
   method: 'GET'
 })
+
+// 获取电台分类 /dj/catelist
+export const reqCateList = () => request({
+  url: '/dj/catelist',
+  method: 'GET'
+})
