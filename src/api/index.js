@@ -82,3 +82,18 @@ export const reqCateList = () => request({
   url: '/dj/catelist',
   method: 'GET'
 })
+
+// 获取推荐电台节目 /program/recommend
+export const reqPorgramRecommend = () => request({
+  url: '/program/recommend',
+  methods: 'GET'
+})
+
+// 获取电台 - 类别热门电台 /dj/radio/hot?cateId=2001
+// limit : 返回数量 , 默认为 30
+// offset : 偏移数量，用于分页 , 如 :( 页数 -1)*30, 其中 30 为 limit 的值 , 默认为 0
+// cateId: 类别 id,可通过 /dj/category/recommend 接口获取
+export const reqDjRadioHot = (cateId, limit = 30, offset = 0) => request({
+  url: `/dj/radio/hot?cateId=${cateId}&limit=${limit}&offset=${offset}`,
+  method: 'GET'
+})
