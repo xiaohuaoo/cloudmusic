@@ -76,11 +76,12 @@
               <img v-lazy="item.intervenePicUrl">
             </div>
             <div class="cnt">
-              
+              <li v-for="item,index in dj.data" :key="index">
               <h3 class="fc over">
                 <span class="underline">{{item.name}}</span>
               </h3>
               <p class="note over">{{item.rcmdtext}}</p>
+              </li>
             </div>
           </li>
         </ul>
