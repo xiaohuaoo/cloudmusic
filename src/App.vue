@@ -18,14 +18,7 @@ export default {
     Header,
     GoTop,
     MyFooter
-  },
-  props: {},
-  data () {
-    return {}
-  },
-  created () {},
-  mounted () {},
-  methods: {}
+  }
 }
 </script>
 

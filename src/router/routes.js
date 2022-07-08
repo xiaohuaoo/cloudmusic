@@ -1,9 +1,9 @@
 export default [
-//   {
-//     name: 'download',
-//     path: '/download',
-//     component: () => import('@/views/Download')
-//   },
+  {
+    name: 'download',
+    path: '/download',
+    component: () => import('@/views/Download')
+  },
   {
     name: 'home',
     path: '/home',

@@ -7,8 +7,8 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import * as API from '@/api'
 import atm from '@/assets/lazyload.gif'
-import VueLazyload from 'vue-lazyload'
-Vue.use(VueLazyload, {
+import VueLazyLoad from 'vue-lazyload'
+Vue.use(VueLazyLoad, {
   // 懒加载默认的图片
   loading: atm
 })
