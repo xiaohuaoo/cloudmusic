@@ -57,8 +57,8 @@ export default {
       return this.$route.query.id
     }
   },
-  watch:{
-    id(){
+  watch: {
+    id () {
       this.getDjHot()
       this.getDjRadioHot()
     }
@@ -66,7 +66,7 @@ export default {
   methods: {
     // 获取当前id下热门电台
     async getDjRadioHot () {
-      let result = await this.$API.reqDjRadioHot(this.id, this.pageSize, (this.pageNo - 1) * this.pageSize)
+      const result = await this.$API.reqDjRadioHot(this.id, this.pageSize, (this.pageNo - 1) * this.pageSize)
       this.djList = result.djRadios.slice(0, this.pageSize)
     },
     // 获取前五作为优秀电台
@@ -191,7 +191,7 @@ export default {
               cursor: pointer;
               text-decoration: underline;
             }
-          }          
+          }
           .note {
             width: 100%;
             margin-block: 6px;

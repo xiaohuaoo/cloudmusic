@@ -24,7 +24,7 @@ export default {
   props: {},
   data () {
     return {
-      //推荐歌手分类
+      // 推荐歌手分类
       recommendList: [
         {
           name: '推荐歌手',

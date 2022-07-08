@@ -106,10 +106,22 @@ export const reqArtists = (limit = 50, offset = 0) => request({
 
 // 歌手分类列表 artist/list
 // limit : 返回数量 , 默认为 30
-// offset : 偏移数量，用于分页 , 如 : 如 :( 页数 -1)*30, 其中 30 为 limit 的值 , 默认为 0 
+// offset : 偏移数量，用于分页 , 如 : 如 :( 页数 -1)*30, 其中 30 为 limit 的值 , 默认为 0
 // initial: 按首字母索引查找参数,如 /artist/list?type=1&area=96&initial=b 返回内容将以 name 字段开头为 b 或者拼音开头为 b 为顺序排列, 热门传-1,#传 0
 // type 取值:
 export const reqArtistsList = (type = -1, area = -1, initial = -1, limit = 30, offset = 0) => request({
   url: `artist/list?type=${type}&area=${area}&initial=${initial}&limit=${limit}&offset=${offset}`,
+  method: 'GET'
+})
+
+// 最新专辑 /album/newest
+export const reqAlbumNewset = () => request({
+  url: '/album/newest',
+  method: 'GET'
+})
+
+// 获取专辑内容 /album
+export const reqAlbums = (id) => request({
+  url: `/album?id=${id}`,
   method: 'GET'
 })

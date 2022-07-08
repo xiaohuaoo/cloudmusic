@@ -38,7 +38,7 @@
               <i class="pointer" v-if="singer.alias.length != 0"></i>
             </p>
           </li>
-        </div>      
+        </div>
       </div>
       <div class="moreOther clearfix">
         <li class="sml" v-for="sml, index in artlist3" :key="index">
@@ -62,16 +62,16 @@ export default {
   methods: {
     // 获取热门歌手
     async getArtistTop () {
-      let result = await this.$API.reqArtists(110)
+      const result = await this.$API.reqArtists(110)
       this.artlist1 = result.artists.slice(10, 20)
       this.artlist2 = result.artists.slice(0, 10)
       this.artlist3 = result.artists.slice(20)
     },
-    //获取分类歌手
+    // 获取分类歌手
     // async getArtistsList () {
     //   let result = await this.$API.reqArtistsList()
     // },
-    //前往入驻歌手模块
+    // 前往入驻歌手模块
     more () {
       this.$router.push({
         path: '/home/artist',
@@ -115,7 +115,7 @@ export default {
                     color: #333;
                 }
             }
-        }   
+        }
         .sgerlist{
             width: 736px;
             margin-left: -17px;
@@ -141,30 +141,29 @@ export default {
                         top: 0;
                         position: absolute;
                         background: url('../../images/coverall.png') no-repeat 0 -680px;
-                    }   
-            
+                    }
                 }
                 p{
                     margin-top: 8px;
                     float: left;
                     width: 100%;
                     a{
-                        color: #000;    
+                        color: #000;
                     }
                     >a:hover{
                         color: #000;
                     }
                     i{
                         display: block;
-                        float: right;    
+                        float: right;
                         margin: 1px 0 0 5px;
                         width: 17px;
                         height: 18px;
                         background: url("../../images/icon.png") no-repeat 0 -740px;
                     }
-                }     
+                }
             }
-        }         
+        }
     }
     .moreOther{
         width: 720px;
@@ -189,7 +188,7 @@ export default {
             }
             i{
                 display: block;
-                float: left;    
+                float: left;
                 margin: 1px 0 0 5px;
                 width: 17px;
                 height: 18px;

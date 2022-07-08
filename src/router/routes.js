@@ -24,15 +24,15 @@ export default [
       {
         path: 'djradio',
         component: () => import('@/views/Home/DjRadio')
+      },
+      {
+        path: 'artist',
+        component: () => import('@/views/Home/Artist')
+      },
+      {
+        path: 'album',
+        component: () => import('@/views/Home/Album')
       }
-      // {
-      //     path:'artist',
-      //     component:()=>import('@/views/Home/Artist'),
-      // },
-      // {
-      //   path: 'album',
-      //   component: () => import('@/views/Home/Album')
-      // }
     ]
   },
   // {

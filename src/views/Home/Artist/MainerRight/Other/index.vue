@@ -47,7 +47,7 @@
         <!-- 更多歌手 -->
         <div class="moreOther clearfix">
           <li class="sml" v-for="sml, index in artlist2" :key="index">
-            <router-link :to="{path: '/artist/song', query: {id: sml.id}}" class="over underline">{{sml.name}}</router-link>              
+            <router-link :to="{path: '/artist/song', query: {id: sml.id}}" class="over underline">{{sml.name}}</router-link>
             <i class="pointer" v-if="sml.alias.length != 0"></i>
           </li>
         </div>
@@ -82,21 +82,21 @@ export default {
   methods: {
     // 获取热门歌手
     async getArtistTop (limit) {
-      let result = await this.$API.reqArtists(limit)
+      const result = await this.$API.reqArtists(limit)
       this.allartlist = result.allartlist
     },
-    //获取分类歌手
-    async getArtistsList(){
+    // 获取分类歌手
+    async getArtistsList () {
       let { area, type, initial } = this
-      if  (initial == undefined ) initial = -1
-      let result = await this.$API.reqArtistsList(type, area, initial, 100, 0)
+      if (initial === undefined) initial = -1
+      const result = await this.$API.reqArtistsList(type, area, initial, 100, 0)
       this.artlist1 = result.artists.slice(0, 10)
       this.artlist2 = result.artists.slice(10)
     },
     changeInitial (item) {
-      if (item == '热门') {
+      if (item === '热门') {
         item = -1
-      } else if (item == '其他') {
+      } else if (item === '其他') {
         item = 0
       }
       this.$router.push({
@@ -122,9 +122,9 @@ export default {
   },
   mounted () {
     this.getArtistTop(100)
-    thi.getArtistsList()
+    this.getArtistsList()
     this.nlist.push('热门')
-    for(let i = 0;i < 26;i++){
+    for (let i = 0; i < 26; i++) {
       this.nlist.push(String.fromCharCode(65 + i))
     }
     this.nlist.push('其他')
@@ -160,7 +160,7 @@ export default {
                         color: #333;
                     }
                 }
-            }   
+            }
             .sgerlist{
                 width: 736px;
                 margin-left: -17px;
@@ -185,30 +185,29 @@ export default {
                             top: 0;
                             position: absolute;
                             background: url('../../images/coverall.png') no-repeat 0 -680px;
-                        }   
-                
+                        }
                     }
                     p{
                         margin-top: 8px;
                         float: left;
                         width: 100%;
                         a{
-                            color: #000;    
+                            color: #000;
                         }
                         >a:hover{
                             color: #000;
                         }
                         i{
                             display: block;
-                            float: right;    
+                            float: right;
                             margin: 1px 0 0 5px;
                             width: 17px;
                             height: 18px;
                             background: url("../../images/icon.png") no-repeat 0 -740px;
                         }
-                    }     
+                    }
                 }
-            }         
+            }
         }
     }
     .oth{
@@ -258,12 +257,11 @@ export default {
             .active{
                 background: #c20c0c;
                 a{
-                    color: #fff; 
+                    color: #fff;
                     &:hover{
                         color: #fff;
-                    }   
+                    }
                 }
-                
             }
             li:first-child,
             li:last-child{
@@ -295,30 +293,29 @@ export default {
                         top: 0;
                         position: absolute;
                         background: url('../../images/coverall.png') no-repeat 0 -680px;
-                    }   
-            
+                    }
                 }
                 p{
                     margin-top: 8px;
                     float: left;
                     width: 100%;
                     a{
-                        color: #000;    
+                        color: #000;
                     }
                     >a:hover{
                         color: #000;
                     }
                     i{
                         display: block;
-                        float: right;    
+                        float: right;
                         margin: 1px 0 0 5px;
                         width: 17px;
                         height: 18px;
                         background: url("../../images/icon.png") no-repeat 0 -740px;
                     }
-                }     
+                }
             }
-        }   
+        }
         .moreOther{
             width: 720px;
             margin-top: 10px;
@@ -342,7 +339,7 @@ export default {
                 }
                 i{
                     display: block;
-                    float: left;    
+                    float: left;
                     margin: 1px 0 0 5px;
                     width: 17px;
                     height: 18px;
@@ -350,7 +347,7 @@ export default {
                 }
 
             }
-        } 
+        }
     }
 }
 </style>
