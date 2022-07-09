@@ -64,61 +64,63 @@ export default {
 
 <style lang="less" scoped>
 .mainerLeft {
-    float: left;
-    width: 241px;
-    height: 2284.4px;
-    border-right: 1px solid #d3d3d3;
-    position: relative;
-    background: rgb(249,249,249);
-    .minelst {
-        margin-top: 40px;
-        height: 2284.4px;
-        width: 100%;
-        float: left;
-        .ff1 {
-            padding:0 10px 12px 15px;
-            width: 240px;
-            // height: 27.2px;
-            font-size: 14px;
-            color: #000;
-            font-family: simsun,\5b8b\4f53;
-            display: block;
-        }
+  float: left;
+  width: 241px;
+  height: 2284.4px;
+  border-right: 1px solid #d3d3d3;
+  position: relative;
+  background: rgb(249,249,249);
+  .minelst{
+      margin-top: 40px;
+      height: 2244.4px;
+      width: 100%;
+      float: left;
+      .ff1{
+          padding:0 10px 12px 15px;
+          width: 240px;
+          // height: 27.2px;
+          font-size: 14px;
+          color: #000;
+          font-family: simsun,\5b8b\4f53;
+          display: block;
+      }
 
-        .f-cb {
-            width: 240px;
+      .f-cb{
+          width: 240px;
 
-            .mine {
-                width: 240px;
-                height: 6px;
-                padding: 10px 0 10px 20px;
-                position: relative;
-                &:hover {
-                    background: rgb(244,242,242);
-                    cursor: pointer;
-                }
+          .mine{
+              width: 240px;
+              height: 62px;
+              padding: 10px 0 10px 20px;
+              position: relative;
+              &:hover{
+                  background: rgb(244,242,242);
+                  cursor: pointer;
+              }
 
-                img {
-                    width: 40px;
-                    height: 40px;
-                    margin-right: 10px;
-                    float: left;
-                }
+              img{
+                  width: 40px;
+                  height: 40px;
+                  margin-right: 10px;
+                  float: left;
+              }
+              
+              .name{
+                  color: #000;
+                  // height: 16px;
+                  margin: 1px 0 4px;
+              }
 
-                .name {
-                    color: #000;
-                    margin: 1px 0 4px;
-                }
-
-                .fc {
-                    font-size: 12px;
-                    color: #999;
-                }
-            }
-        }
-    }
-    .active{
-        background: rgb(230,230,230);
-    }
+              .fc{
+                  font-size: 12px;
+                  color: #999;
+              }
+              
+          }
+      }
+  }
+  .active{
+      background: rgb(230,230,230);
+  }
 }
 </style>

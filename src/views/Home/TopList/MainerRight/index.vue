@@ -80,6 +80,7 @@ export default {
     // 获取排行榜详情
     async getPlayList () {
       const result = await this.$API.reqPlayList(this.id)
+      console.log(result);
       this.playList = result.playList
       this.songList = result
       let s = ''
@@ -111,24 +112,21 @@ export default {
       width: 100%;
       height: 238px;
       padding: 40px;
-
       .info{
           width: 100%;
           height: 100%;
           display: flex;
-
           .cover{
               width: 158px;
               height: 158px;
               padding: 3px;
               border: 1px solid #ccc;
               position: relative;
-
               img{
                   width: 150px;
                   height: 150px;
               }
-
+              
               .mask{
                   width: 150px;
                   height: 150px;
@@ -139,7 +137,6 @@ export default {
                   background: url('../images/coverall.png') no-repeat -230px -380px;
               }
           }
-
           .cnt{
               width: 473px;
               height: 114px;
@@ -149,11 +146,12 @@ export default {
                   width: 473px;
                   height: 24px;
                   h4{
-                    font-weight: normal;
-                    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif !important;
-                    font-size: 20px;
-                    color: #333;
+                      font-weight: normal; 
+                      font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif !important;
+                      font-size: 20px;   
+                      color: #333;
                   }
+                  
               }
               .user{
                   margin-top: 5px;
@@ -161,7 +159,6 @@ export default {
                   height: 35px;
                   line-height: 35px;
                   margin-bottom: 20px;
-
                   i{
                       display: inline-block;
                       width: 13px;
@@ -179,7 +176,6 @@ export default {
               .btns{
                   height: 31px;
                   display: flex;
-
                   .play{
                       width: 66px;
                       padding-left: 5px;
@@ -189,7 +185,6 @@ export default {
                       height: 31px;
                       border-top-left-radius: 5px;
                       border-bottom-left-radius: 5px;
-
                       i{
                           width: 20px;
                           height: 18px;
@@ -197,30 +192,27 @@ export default {
                           float: left;
                           background: url('../images/button2.png') no-repeat 0 -1622px;
                       }
-
                       span{
                           color: #fff;
                       }
                       &:hover{
-                          cursor: pointer;
+                          cursor: pointer;  
                       }
                   }
-
                   .add{
                       width: 31px;
                       height: 31px;
                       margin-right: 5px;
                       background: url('../images/button2.png') no-repeat 0 -1588px;
-
+                      
                       &:hover{
                           cursor: pointer;
-                          background-position: -40px -1588px;
+                          background-position: -40px -1588px;  
                       }
                       &:active{
-                          background-position: -80px -1588px;
+                          background-position: -80px -1588px;  
                       }
                   }
-
                   .dis{
                       width: 92.6px;
                       // padding-right: 5px;
@@ -241,7 +233,7 @@ export default {
                           cursor: pointer;
                       }
                   }
-
+                  
                   .share{
                       width: 79.8px;
                       height: 31px;
@@ -252,7 +244,6 @@ export default {
                       cursor: pointer;
                       background: url('../images/button2.png') no-repeat;
                       background-position: 0 -1225px;
-
                       span{
                           width: 100%;
                           height: 100%;
@@ -262,13 +253,12 @@ export default {
                           background: url('../images/button2.png') no-repeat;
                           background-position: right -1020px;
                       }
-
+                      
                       &:hover{
                           color:#666;
                           cursor: pointer;
                       }
                   }
-
                   .download{
                       margin-right: 5px;
                       width: 60px;
@@ -278,7 +268,6 @@ export default {
                       cursor: pointer;
                       background: url('../images/button2.png') no-repeat;
                       background-position: 0 -2761px;
-
                       span{
                           width: 100%;
                           height: 100%;
@@ -293,7 +282,6 @@ export default {
                           cursor: pointer;
                       }
                   }
-
                   .comment{
                       margin-right: 5px;
                       width: 90px;
@@ -303,7 +291,6 @@ export default {
                       cursor: pointer;
                       background: url('../images/button2.png') no-repeat;
                       background-position: 0 -1465px;
-
                       span{
                           width: 100%;
                           height: 100%;

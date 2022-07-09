@@ -38,9 +38,13 @@ export default {
 </script>
 
 <style type="text/css" scoped>
+html, body {
+  padding: 0;
+  margin: 0;
+}
 .mainer {
-    width: 982px;
-    display: flex;
-    margin: 0 auto;
+  width: 982px;
+  display: flex;
+  margin: 0 auto;
 }
 </style>

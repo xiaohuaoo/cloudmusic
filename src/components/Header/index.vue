@@ -53,7 +53,7 @@
                     <i class="songs" v-show="item=='songs'"></i>
                     <i class="artists" v-show="item=='artists'"></i>
                      <i class="albums" v-show="item=='albums'"></i>
-                    <i class="playlists" v-show="item=='playlists'"></i>
+                    <i class="playlists" v-show="item=='playlists'"></i>  
                     <span v-show="item=='songs'">单曲</span>
                     <span v-show="item=='artists'">歌手</span>
                     <span v-show="item=='albums'">专辑</span>
@@ -555,12 +555,11 @@ export default {
 }
 </script>
 
-<style lang = 'less' scoped>
+<style lang="less" scoped>
 body {
   color: #333;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-text-size-adjust: none;
-  list-style: none;
   .header-wrapper {
     width: 100%;
     height: 70px;
@@ -575,10 +574,12 @@ body {
       margin: 0 auto;
       .logo {
         float: left;
-        width: 177px;
+        width: 170px;
         height: 69px;
         padding-right: 20px;
         line-height: 70px;
+        position: relative;
+        bottom: 20px;
         background: url("./image/topbar.png") no-repeat;
         &:hover {
           cursor: pointer;
@@ -594,6 +595,9 @@ body {
         text-align: center;
         color: #ccc;
         float: left;
+        list-style: none;
+        position: relative;
+        bottom: 15px;
         li {
           float: left;
           padding: 0 19px;
@@ -721,7 +725,7 @@ body {
                     margin: 2px 4px 0 0;
                     width: 14px;
                     height: 15px;
-                    /* background: url('../images/icon.png'); */
+                    background: url('../images/icon.png');
                   }
                   .songs{
                     background-position: -35px -300px;
@@ -752,6 +756,7 @@ body {
                   border-left: 1px solid #e2e2e2;
                   li{
                     width: 100%;
+                    
                     i{
                       padding-left: 10px;
                       display: block;

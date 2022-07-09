@@ -43,13 +43,13 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .radio {
-    width: 982px;
-    margin: 0 auto;
-    padding: 40px;
-    border: 1px solid #d3d3d3;
-    display: block;
-    background-color: #fff;
+  width: 982px;
+  margin: 0 auto;
+  padding: 40px;
+  border: 1px solid #d3d3d3;
+  display: block;
+  background-color: #fff;
 }
 </style>

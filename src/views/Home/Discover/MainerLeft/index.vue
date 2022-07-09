@@ -18,30 +18,23 @@ export default {
     Recommendation,
     New,
     TopList
-  },
-  props: {},
-  data () {
-    return {}
-  },
-  created () {},
-  mounted () {},
-  methods: {}
+  }
 }
 </script>
 
-<style scoped>
-.MainerLeft {
-    padding: 20px 20px 40px 20px;
-    width: 731px;
-    position: relative;
-    left: 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-bottom: none;
+<style style="less" scoped>
+.MainerLeft{
+  padding: 20px 20px 40px 20px;
+  width: 731px;
+  position: relative;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom: none;
 }
-.space {
-    width: 100%;
-    height: 0;
-    margin-bottom: 35px;
+.space{
+  width: 100%;
+  height: 0;
+  margin-bottom:35px ;
 }
 </style>
