@@ -125,3 +125,9 @@ export const reqAlbums = (id) => request({
   url: `/album?id=${id}`,
   method: 'GET'
 })
+
+// 获取用户详情 /user/detail
+export const reqUserDetail = (uid, cookie) => request({
+  url: `/user/detail?uid=${uid}&cookie=${cookie}`,
+  method: 'GET'
+})
