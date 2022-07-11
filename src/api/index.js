@@ -131,3 +131,9 @@ export const reqUserDetail = (uid, cookie) => request({
   url: `/user/detail?uid=${uid}&cookie=${cookie}`,
   method: 'GET'
 })
+
+// 获取用户播放记录 /user/record
+export const reqUserRecord = (uid, cookie, type) => request({
+  url: `/user/record?uid=${uid}&cookie=${cookie}&type=${type}`,
+  method: 'GET'
+})
