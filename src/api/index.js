@@ -137,3 +137,8 @@ export const reqUserRecord = (uid, cookie, type) => request({
   url: `/user/record?uid=${uid}&cookie=${cookie}&type=${type}`,
   method: 'GET'
 })
+
+// 获取用户歌单 /user/playlist?uid=
+export const reqUserPlayList = (uid, cookie) => request({
+  url: `/user/playlist?uid=${uid}&cookie=${cookie}`
+})
