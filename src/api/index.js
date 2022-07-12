@@ -19,12 +19,6 @@ export const reqTopList = () => request({
   method: 'GET'
 })
 
-// 获取用户等级 /user/level
-export const reqLevel = (cookie) => request({
-  url: `/user/level?cookie=${cookie}`,
-  method: 'GET'
-})
-
 // 通知-私信 /msg/private?limit=3
 export const reqPrivateMsg = (cookie, limit = 30, offset = 0) => request({
   url: `/msg/private?limit=${limit}&offset=${offset}&cookie=${cookie}`,
@@ -141,4 +135,10 @@ export const reqUserRecord = (uid, cookie, type) => request({
 // 获取用户歌单 /user/playlist?uid=
 export const reqUserPlayList = (uid, cookie) => request({
   url: `/user/playlist?uid=${uid}&cookie=${cookie}`
+})
+
+// 获取用户等级 /user/level
+export const reqLevel = (cookie) => request({
+  url: `/user/level?cookie=${cookie}`,
+  method: 'GET'
 })
