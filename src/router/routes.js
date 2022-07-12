@@ -35,37 +35,37 @@ export default [
       }
     ]
   },
-  // {
-  //     name:'mymusic',
-  //     path:'/mymusic',
-  //     component:()=>import('@/views/MyMusic'),
-  //     children:[
-  //         {
-  //             path:'playlist',
-  //             component:()=>import('@/views/MyMusic/Logged/Playlist'),
-  //         }
-  //     ]
-  // },
+  {
+    name: 'mymusic',
+    path: '/mymusic',
+    component: () => import('@/views/MyMusic'),
+    children: [
+      {
+        path: 'playlist',
+        component: () => import('@/views/MyMusic/Logged/Playlist')
+      }
+    ]
+  },
   // {
   //     name:'friend',
   //     path:'/friend',
   //     component:()=>import('@/views/Friend'),
   // },
-  // {
-  //     name:'user',
-  //     path:'/user',
-  //     component:()=>import('@/views/User'),
-  //     children:[
-  //         {
-  //             path:'home',
-  //             component:()=>import('@/views/User/Home'),
-  //         },
-  //         {
-  //             path:'level',
-  //             component:()=>import('@/views/User/Level'),
-  //         }
-  //     ]
-  // },
+  {
+    name: 'user',
+    path: '/user',
+    component: () => import('@/views/User'),
+    children: [
+      {
+        path:' home',
+        component: () => import('@/views/User/Home')
+      },
+      {
+        path: 'level',
+        component: () => import('@/views/User/Level')
+      }
+    ]
+  },
   // {
   //     name:'playlist',
   //     path:'/playlist/:key?',
