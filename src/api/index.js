@@ -142,3 +142,9 @@ export const reqLevel = (cookie) => request({
   url: `/user/level?cookie=${cookie}`,
   method: 'GET'
 })
+
+// 获取登录后用户歌单详情 /playlist/detail
+export const reqPlayListDetail = (id, cookie) => request({
+  url: `/playlist/detail?id=${id}&cookie=${cookie}`,
+  method: 'GET'
+})
