@@ -104,7 +104,7 @@ export default {
         AllList:state=>state.home.newAlbum,
       }),
       imgList(){
-        return this.AllList.slice(0,7);
+        // return this.AllList.slice(0,6);
       },
     },
     mounted(){
