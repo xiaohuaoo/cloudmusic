@@ -177,3 +177,9 @@ export const reqSimiSong = (id) => request({
   url: `/simi/song?id=${id}`,
   method: 'GET'
 })
+
+// 获取登录后用户的好友动态 /event?pagesize=30
+export const reqEvent = (pagesize, cookie, lasttime = -1) => request({
+  url: `/event?pagesize=${pagesize}&cookie=${cookie}&lasttime=${lasttime}`,
+  method: 'GET'
+})

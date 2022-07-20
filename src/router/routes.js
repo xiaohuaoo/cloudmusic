@@ -46,11 +46,11 @@ export default [
       }
     ]
   },
-  // {
-  //     name:'friend',
-  //     path:'/friend',
-  //     component:()=>import('@/views/Friend'),
-  // },
+  {
+    name: 'friend',
+    path: '/friend',
+    component: () => import('@/views/Friend')
+  },
   {
     name: 'user',
     path: '/user',
