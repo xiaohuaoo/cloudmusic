@@ -66,21 +66,21 @@ export default [
       }
     ]
   },
-  // {
-  //     name:'playlist',
-  //     path:'/playlist/:key?',
-  //     component:()=>import('@/views/PlayList'),
-  // },
-  // {
-  //     name:'search',
-  //     path:'/search',
-  //     component:()=>import('@/views/Search'),
-  // },
-  // {
-  //     name:'song',
-  //     path:'/song',
-  //     component:()=>import("@/views/Song"),
-  // },
+  {
+    name: 'playlist',
+    path: '/playlist/:key?',
+    component: () => import('@/views/PlayList')
+  },
+  {
+    name: 'search',
+    path: '/search',
+    component: () => import('@/views/Search')
+  },
+  {
+    name: 'song',
+    path: '/song',
+    component: () => import("@/views/Song")
+  },
   // {
   //     name:'artist',
   //     path:'/artist',

@@ -159,3 +159,9 @@ export const reqSerachSuggest = (keywords) => request({
   url: `/search/suggest?keywords=${keywords}`,
   method: 'GET'
 })
+
+// 获取歌词 /lyric?id=33894312
+export const reqlyric = (id) => request({
+  url: `/lyric?id=${id}`,
+  method: 'GET'
+})
