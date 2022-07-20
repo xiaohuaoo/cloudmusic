@@ -165,3 +165,9 @@ export const reqlyric = (id) => request({
   url: `/lyric?id=${id}`,
   method: 'GET'
 })
+
+// 获取歌曲评论 /comment/music?id=186016&limit=1
+export const reqCommentMusic = (id, limit = 20, offset = 0) => request({
+  url: `/comment/music?id=${id}&limit=${limit}&offset=${offset}`,
+  method: 'GET'
+})
