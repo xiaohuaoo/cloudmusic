@@ -171,3 +171,9 @@ export const reqCommentMusic = (id, limit = 20, offset = 0) => request({
   url: `/comment/music?id=${id}&limit=${limit}&offset=${offset}`,
   method: 'GET'
 })
+
+// 获取相似歌曲 /simi/song
+export const reqSimiSong = (id) => request({
+  url: `/simi/song?id=${id}`,
+  method: 'GET'
+})
