@@ -189,3 +189,9 @@ export const reqCommentAlbum = (id, limit = 20, offset = 0) => request({
   url: `/comment/album?id=${id}&limit=${limit}&offset=${offset}`,
   method: 'GET'
 })
+
+// 获取歌手专辑 /artist/album
+export const reqArtistAlbum = (id, limit = 12, offset = 0) => request({
+  url: `/artist/album?id=${id}&limit=${limit}&offset=${offset}`,
+  method: 'GET'
+})
