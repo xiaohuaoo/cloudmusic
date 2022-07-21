@@ -195,3 +195,9 @@ export const reqArtistAlbum = (id, limit = 12, offset = 0) => request({
   url: `/artist/album?id=${id}&limit=${limit}&offset=${offset}`,
   method: 'GET'
 })
+
+// 获取歌手详情 /artist/detail
+export const reqArtistDetail = (id) => request({
+  url: `/artist/detail?id=${id}`,
+  method: 'GET'
+})
