@@ -183,3 +183,9 @@ export const reqEvent = (pagesize, cookie, lasttime = -1) => request({
   url: `/event?pagesize=${pagesize}&cookie=${cookie}&lasttime=${lasttime}`,
   method: 'GET'
 })
+
+// 获取专辑评论 /comment/album
+export const reqCommentAlbum = (id, limit = 20, offset = 0) => request({
+  url: `/comment/album?id=${id}&limit=${limit}&offset=${offset}`,
+  method: 'GET'
+})
