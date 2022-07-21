@@ -201,3 +201,9 @@ export const reqArtistDetail = (id) => request({
   url: `/artist/detail?id=${id}`,
   method: 'GET'
 })
+
+// 获取歌手单曲 /artists
+export const reqArtist = (id) => request({
+  url: `/artists?id=${id}`,
+  method: 'GET'
+})
