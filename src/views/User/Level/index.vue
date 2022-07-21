@@ -81,7 +81,7 @@ export default {
   methods: {
     // 获取用户等级
     async getLevel () {
-      let result = await this.$API.reqLevel(localStorage.getItem('COOKIE'))
+      const result = await this.$API.reqLevel(localStorage.getItem('COOKIE'))
       this.userInfo = result.data
       this.rellevel = result.data.level
       this.userInfo.data = this.userInfo.info.split('$')
