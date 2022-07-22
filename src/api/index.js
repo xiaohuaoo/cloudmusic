@@ -145,6 +145,15 @@ export const reqAlbumNewset = () => request({
   method: 'GET'
 })
 
+// 获取全部新碟 /album/new?area=KR&limit=10
+// limit : 返回数量 , 默认为 30
+// offset : 偏移数量，用于分页 , 如 :( 页数 -1)*30, 其中 30 为 limit 的值 , 默认为 0
+// area : ALL:全部,ZH:华语,EA:欧美,KR:韩国,JP:日本
+export const reqAlbumNew = (limit = 30, offset = 0, area = "ALL") => request({
+  url: `/album/new?area=${area}&limit=${limit}&offset=${offset}`,
+  method: 'GET'
+})
+
 // 获取专辑内容 /album
 export const reqAlbums = (id) => request({
   url: `/album?id=${id}`,

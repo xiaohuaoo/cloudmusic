@@ -130,7 +130,7 @@ export default {
         },
         // 获取热门评论
         async getCommentHot(){
-            let result = await this.$API.reqCommentHot(this.id,3);
+            let result = await this.$API.reqCommentHot(this.id, 3);
             this.hotlist = result.hotComments;
             this.hotlist.forEach(item=>{
                 item.content = item.content.replace(/\n/g,'<br>');

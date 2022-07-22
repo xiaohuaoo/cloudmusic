@@ -1,13 +1,17 @@
 // 引入home模块下的所有数据
-import { reqPersonalized } from '@/api'
+import { reqPersonalized, reqAlbumNewset, reqAlbumNew } from '@/api'
 
 const state = {
-  PersonalizedList: {}
+  PersonalizedList: {},
+  newAlbum: []
 }
 
 const mutations = {
   GETPERSONALIZED (state, data) {
     state.PersonalizedList = data
+  },
+  GETNEW (state, data) {
+    state.newAlbum = data
   }
 }
 
@@ -18,6 +22,18 @@ const actions = {
     if (result.code === 200) {
       commit('GETPERSONALIZED', result.result)
     }
+  },
+  // 获取新碟上架
+  async getNew ({commit}) {
+    let result = await reqAlbumNewset()
+    if (result.code == 200) {
+      commit('GETNEW', result.albums)
+    }
+  },
+  // 获取全部新碟
+  async getAlbumAll ({commit}, {limit, offset, area}) {
+    let result = await reqAlbumNew(limit = limit, offset = offset, area = area)
+    console.log(result)
   }
 }
 
