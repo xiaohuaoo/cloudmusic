@@ -188,6 +188,7 @@ export const reqPlayListDetail = (id, cookie) => request({
   url: `/playlist/detail?id=${id}&cookie=${cookie}`,
   method: 'GET'
 })
+
 // 搜索 /cloudsearch
 export const reqCloudSearch = (keywords, type, limit = 30, offset = 0) => request({
   url: `/cloudsearch?keywords=${keywords}&type=${type}&limit=${limit}&offset=${offset}`,

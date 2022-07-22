@@ -81,34 +81,34 @@ export default [
     path: '/song',
     component: () => import("@/views/Song")
   },
-  // {
-  //     name:'artist',
-  //     path:'/artist',
-  //     component:()=>import('@/views/Artist'),
-  //     children:[
-  //         {
-  //             path:'song',
-  //             component:()=>import('@/views/Artist/MainerLeft/Song'),
-  //         },
-  //         {
-  //             path:'album',
-  //             component:()=>import('@/views/Artist/MainerLeft/Album'),
-  //         },
-  //         {
-  //             path:'mv',
-  //             component:()=>import('@/views/Artist/MainerLeft/Mv'),
-  //         },
-  //         {
-  //             path:'desc',
-  //             component:()=>import('@/views/Artist/MainerLeft/Desc'),
-  //         },
-  //     ]
-  // },
-  // {
-  //     name:'album',
-  //     path:'/album',
-  //     component:()=>import('@/views/Album'),
-  // },
+  {
+    name: 'artist',
+    path: '/artist',
+    component: () => import('@/views/Artist'),
+    children: [
+      {
+        path: 'song',
+        component: () => import('@/views/Artist/MainerLeft/Song')
+      },
+      {
+        path: 'album',
+        component: () => import('@/views/Artist/MainerLeft/Album')
+      },
+      {
+        path: 'mv',
+        component: () => import('@/views/Artist/MainerLeft/Mv')
+      },
+      {
+        path:' desc',
+        component: () => import('@/views/Artist/MainerLeft/Desc')
+      }
+    ]
+  },
+  {
+    name: 'album',
+    path: '/album',
+    component: () => import('@/views/Album')
+  },
   // 重定向
   {
     path: '*',
