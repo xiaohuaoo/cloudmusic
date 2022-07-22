@@ -8,10 +8,11 @@ import nprogress from 'nprogress';
 import "nprogress/nprogress.css"
 // start 进度条开始  done 进度条结束
 const requests = axios.create({
-    baseURL:"http://101.35.235.36:3000/",
+    baseURL:"http://localhost:3000",
     // 代表请求超时的时间5s
     timeout:5000,
-    headers:{'Content-Type':'application/x-www-form-urlencoded'}
+    headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    withCredentials: true
 });
 //请求拦截器
 requests.interceptors.request.use((config)=>{

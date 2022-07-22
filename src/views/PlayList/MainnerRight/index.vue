@@ -61,7 +61,7 @@ export default {
     methods:{
         // 获取歌单信息
         async getPlayListDetail(){
-            let result = await this.$API.reqPlayListDetail(this.id,localStorage.getItem('COOKIE'));
+            let result = await this.$API.reqPlayListDetail(this.id, localStorage.getItem('COOKIE'))
             // console.log(result);
             this.likelist = result.playlist.subscribers;
         },

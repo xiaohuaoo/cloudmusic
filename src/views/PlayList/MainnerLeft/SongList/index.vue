@@ -93,7 +93,7 @@ export default {
     methods:{
         // 获取歌单详情 
         async getPlayList(){
-            let result = await this.$API.reqPlayListDetail(this.id,localStorage.getItem('COOKIE'));
+            let result = await this.$API.reqPlayListDetail(this.id, localStorage.getItem('COOKIE'));
             // console.log(result);
             this.playlist = result.playlist;
             this.songlist = result.privileges;

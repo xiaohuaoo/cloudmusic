@@ -3,13 +3,15 @@
     <Header />
     <GoTop />
     <router-view></router-view>
-    <MyFooter />
+    <Music></Music>
+    <MyFooter v-show='isShowFoot'/>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header'
 import GoTop from '@/components/GoTop'
+import Music from '@/components/Music'
 import MyFooter from '@/components/MyFooter'
 
 export default {
@@ -17,7 +19,24 @@ export default {
   components: {
     Header,
     GoTop,
+    Music,
     MyFooter
+  },
+  data () {
+    return {
+      isShowFoot: true
+    }
+  },
+  computed:{
+    path(){
+      return this.$route.path
+    }
+  },
+  watch: {
+    path () {
+      if(this.$route.path.indexOf('/mymusic') != -1) this.isShowFoot = false
+      else this.isShowFoot = true
+    }
   }
 }
 </script>
