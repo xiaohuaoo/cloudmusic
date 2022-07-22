@@ -213,3 +213,9 @@ export const reqArtistMv = (id) => request({
   url: `/artist/mv?id=${id}`,
   method: 'GET'
 })
+
+// 获取歌手描述 /artist/desc
+export const reqArtistDesc = (id) => request({
+  url: `/artist/desc?id=${id}`,
+  method: 'GET'
+})
