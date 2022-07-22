@@ -7,6 +7,37 @@ export const reqBanner = () => request({
   url: '/banner?type=0'
 })
 
+// 登陆部分
+//手机登录（验证码）/login/cellphone?phone=&captcha=
+export const reqCellPhoneByCode = (phone, num) => request({
+  url: `/login/cellphone?phone=${phone}&captcha=${num}`,
+  method: 'POST'
+})
+
+//手机登录（密码） /login/cellphone?phone=&password=
+export const reqCellPhoneByPassword = (phone, num) => request({
+  url: `/login/cellphone?phone=${phone}&password=${num}`,
+  method: 'POST'
+})
+
+// 刷新登录状态 /login/refresh?
+export const reqRefresh = (cookie) => request({
+  url: `/login/refresh?cookie=${cookie}`,
+  method: 'GET'
+})
+
+// 获取账号信息 /user/account
+export const reqAccount = (cookie) => request({
+  url: `/user/account?cookie=${cookie}`,
+  method: 'GET'
+})
+
+// 退出登录 /logout
+export const reqLogout = () => request({
+  url: '/logout',
+  method: 'GET'
+})
+
 // 获取热门推荐 /personalized?limit=8
 export const reqPersonalized = (limit) => request({
   url: `/personalized?limit=${limit}`,
