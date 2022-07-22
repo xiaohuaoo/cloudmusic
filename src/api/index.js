@@ -266,3 +266,9 @@ export const reqArtistSimi = (id) => request({
   url: `/simi/artist?id=${id}`,
   method: 'GET'
 })
+
+// 获取音乐url /song/url
+export const reqSongUrl = (id) => request({
+  url: `/song/url?id=${id}`,
+  method: 'GET'
+})

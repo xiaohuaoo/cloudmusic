@@ -4,9 +4,28 @@ import { reqSong } from '@/api'
 
 const state = {}
 
-const mutations = {}
+const mutations={
+  // 设置播放列表
+  SETMUSICLIST (state,list) {
+    state.musicList = list || []
+  },
+  // 设置当前播放的音乐
+  SETMUSIC (state,music) {
+    state.music = music || {}
+  }
+}
 
 const actions = {
+  // 获取音乐播放列表
+  async getMusicLists({commit}){
+    let list = getMusicList()
+    if(list != null)
+        list = list.replace(',,',',')
+    if(list != null && list.length != 0 && list[list.length-1] == ',') 
+        list = list.substring(0,list.length-1)
+    let result = await reqSong(list)
+    commit('SETMUSICLIST', result.songs)
+  },
   // 添加音乐至播放列表
   async addMusicList ({ commit }, ids) {
     let list = getMusicList()
