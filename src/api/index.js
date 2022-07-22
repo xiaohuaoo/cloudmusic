@@ -219,3 +219,9 @@ export const reqArtistDesc = (id) => request({
   url: `/artist/desc?id=${id}`,
   method: 'GET'
 })
+
+// 获取相似歌手 /simi/artist
+export const reqArtistSimi = (id) => request({
+  url: `/simi/artist?id=${id}`,
+  method: 'GET'
+})
