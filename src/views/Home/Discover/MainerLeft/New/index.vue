@@ -175,7 +175,7 @@ export default {
         .inner{
             padding-left: 16px;
             height: 186px;
-            background: #f5f5f5;
+            // background: #f5f5f5;
             .roll{
                 width: 645px;
                 height: 180px;
