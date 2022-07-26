@@ -5,7 +5,7 @@
       <router-link to="/home/artist">查看全部></router-link>
     </div>
     <div class="body">
-      <li  v-for="artist,index in artistsList" :key=index>
+      <li v-for="artist,index in artistsList" :key=index>
         <router-link :to="{path:'/artist/song',query:{id:artist.id}}" :title="artist.name">
           <div class="head">
             <img v-lazy="artist.url">
@@ -84,19 +84,20 @@ export default {
         height: 380px;
         margin: 6px 0 14px 20px;
         li{
+            list-style: none;
             margin-top: 14px;
             width: 210px;
             height: 62px;
             float: left;
-            background: #fafafa;
+            // background: #fafafa;
             &:hover{
                 cursor: pointer;
                 background-color: #f5f5f5;
             }
             a{
                 float: left;
-                width: 210px;
-                height: 62px;
+                width: 100px;
+                height: 100px;
                 
                 .head{
                     float: left;
@@ -113,6 +114,9 @@ export default {
                     padding-left: 14px;
                     border:1px solid #e9e9e9;
                     border-left: none;
+                    z-index: 1;
+                    margin-top: -70px;
+                    margin-left: 60px;
                     h4{
                         font-size: 14px;
                         color:#333;
